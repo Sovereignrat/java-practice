@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoadAccounts {
+public class LoadAccounts extends BankAccount {
     public static void main(String[] args) {
         // This class would contain methods to load an existing BankAccount from storage
         // For example, reading from a file or database
