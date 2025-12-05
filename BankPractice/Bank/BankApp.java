@@ -62,15 +62,18 @@ public class BankApp {
                 System.out.println("Enter deposit amount:");
                 double amount = myObj.nextDouble();
                 // Perform deposit operation here
+                account.deposit(amount);
                 System.out.println("Deposited: $" + amount);
             } else if (choice == 2) {
                System.out.println("Enter withdrawal amount:");
                double amount = myObj.nextDouble();
                // Perform withdrawal operation here
+                account.withdraw(amount);
                System.out.println("Withdrew: $" + amount);
             } else if (choice == 3) {
                 // Display account information here
                 System.out.println("Displaying account information...");
+                account.displayAccountInfo();
             } else if (choice == 4) {
                 System.out.println("Exiting. Thank you for using our Bank Application!");   
             } else {

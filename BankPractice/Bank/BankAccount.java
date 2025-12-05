@@ -1,8 +1,10 @@
 package Bank;
 import java.io.EOFException;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +56,22 @@ public class BankAccount implements Serializable {
     public String getAccountNumber() {
         return accountNumber;
     }
-
+    
+    public void saveAccount() {
+        String filename = "BankData.bin";
+        try {
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename, true));
+            oos.writeObject(this);
+        } catch (IOException e) {
+            System.out.println("An error occurred while saving the account data.");
+            e.printStackTrace();
+        }
+        for (BankAccount account : accounts) {
+            if (account.accountNumber.equals(accountNumber)) {
+                
+            }
+        }
+    }
     public BankAccount loadAccounts(String accountNumber) {
         String filename = "BankData.bin";
         List<BankAccount> accounts = new ArrayList<BankAccount>();
