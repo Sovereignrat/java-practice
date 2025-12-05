@@ -1,0 +1,21 @@
+# Compiled files
+*.class
+
+# Logs
+*.log
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# VS Code
+.vscode/
+
+# Personal configs
+*.env
+*.properties
+*.bin
